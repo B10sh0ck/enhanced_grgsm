@@ -1,0 +1,23 @@
+#Device 0
+[settings0]
+PPM = 49
+GAIN = 48
+SAMP_RATE = 1e6
+
+#Device 1
+[settings1]
+PPM = 20
+GAIN = 42.1
+SAMP_RATE = 1e6
+
+#Device 2
+[settings2]
+PPM = 49
+GAIN = 40.2
+SAMP_RATE = 1e6
+
+#Device 3
+[settings3]
+PPM = 0
+GAIN = 40.2
+SAMP_RATE = $((100000000/174))
