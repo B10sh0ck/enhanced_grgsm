@@ -13,12 +13,11 @@ dev = str(args.DEV)
 #Parse from config file
 config = ConfigParser.ConfigParser()
 config.read("config")
-PPM = config.getint("settings" + dev,"PPM")
 GAIN = config.getfloat("settings" + dev,"GAIN")
 SAMP_RATE = config.get("settings" + dev,"SAMP_RATE")
 
-print PPM, GAIN, SAMP_RATE
+print GAIN, SAMP_RATE
 
-command = "grgsm_capture --args=rtl=" + dev + " --ppm=" + str(PPM) + " --gain=" + str(GAIN) + " -a " + str(args.ARFCN) + " -s " + SAMP_RATE + " -c " + str(args.ARFCN) + ".cfile"
+command = "grgsm_capture --args=rtl=" + dev +  " --gain=" + str(GAIN) + " -a " + str(args.ARFCN) + " -s " + SAMP_RATE + " " + str(args.ARFCN) + ".cfile"
 print os.system(command)
 print "DONE"
